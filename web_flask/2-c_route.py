@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+A script that starts a Flsk web application
+"""
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -17,7 +21,9 @@ def hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
-    # Replace underscores with spaces in the text variable
+    """
+    Replace underscores with spaces in the text variable
+    """
     text = text.replace("_", " ")
     return "C {}".format(text)
 
